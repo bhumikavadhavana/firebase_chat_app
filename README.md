@@ -18,7 +18,6 @@ Project Technologies:
 - Flutter framework with MVC and Provider/GetX architecture
 
 
-![Screenshot_2023-09-17-13-38-44-10_8c918bf06c4e14a3c6d2957a72894835](https://github.com/bhumikavadhavana/firebase_chat_app/assets/131368253/096177dc-7399-4967-853b-1c7e92567874)
 
 
 ## Getting Started
