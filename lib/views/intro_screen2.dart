@@ -27,23 +27,22 @@ class _Intro_screen2State extends State<Intro_screen2> {
                 width: 300,
                 decoration: const BoxDecoration(
                   image: DecorationImage(
-                    image: AssetImage("assets/gif/connectivity.gif"),
+                    image: AssetImage("assets/gif/i2-removebg-preview (1).png"),
                   ),
                 ),
               ),
-              const Text("Let's Connect with Everyone in the world",
+              const Text("Do real time messaging",
                   style: TextStyle(
                     fontSize: 25,
                     fontWeight: FontWeight.bold,
                     color: Colors.black,
                   )
-                  // GoogleFonts.lato(fontSize: 30, fontWeight: FontWeight.bold),
                   ),
               const SizedBox(
                 height: 10,
               ),
               const Text(
-                "It's easy to find a soul mate nearby & around you.",
+                "you are easy to way chat with your soulmate.",
                 style: TextStyle(
                     fontWeight: FontWeight.w500,
                     color: Colors.grey,

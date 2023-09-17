@@ -36,7 +36,7 @@ class _Intro_screen1State extends State<Intro_screen1> {
                 decoration: const BoxDecoration(
                   color: Colors.white,
                   image: DecorationImage(
-                    image: AssetImage("assets/gif/inbox.gif"),
+                    image: AssetImage("assets/gif/i1-removebg-preview.png"),
                   ),
                 ),
               ),
@@ -44,7 +44,7 @@ class _Intro_screen1State extends State<Intro_screen1> {
                 height: 60,
               ),
               const Text(
-                "The Best Social Media App of the Century",
+                "Welcome  to chitchat",
                 style: TextStyle(
                   fontSize: 26,
                   fontWeight: FontWeight.bold,
@@ -56,7 +56,7 @@ class _Intro_screen1State extends State<Intro_screen1> {
                 height: 10,
               ),
               const Text(
-                "The best messenger and chat app of the century we make your day great.",
+                "Chat with your friend,share photos & video with high quality.",
                 style: TextStyle(
                     fontWeight: FontWeight.w500,
                     color: Colors.grey,
@@ -70,7 +70,7 @@ class _Intro_screen1State extends State<Intro_screen1> {
                   // Get.offNamed('/intro_screen2');
                   introAccessController.introAccessControllerTrueValue(
                       val: true);
-                  Get.offAllNamed('/login_page');
+                  Get.offNamed('/intro_screen2');
                 },
                 child: Container(
                   alignment: Alignment.center,
@@ -95,7 +95,7 @@ class _Intro_screen1State extends State<Intro_screen1> {
               ),
               GestureDetector(
                 onTap: () {
-                  Get.offNamed('/login_page2');
+                  Get.offAllNamed('/login_page');
                 },
                 child: Container(
                   alignment: Alignment.center,

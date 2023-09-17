@@ -41,7 +41,7 @@ void main() async {
         GetPage(name: '/login_page', page: () => const Login_page()),
         GetPage(name: '/otplogin_page', page: () => const otpLogainpage()),
         GetPage(name: '/otpverify_page', page: () => const Otpverify_page()),
-        GetPage(name: '/chat_page', page: () => const Chat_page()),
+        GetPage(name: '/chat_page', page: () =>  Chat_page()),
         GetPage(
             name: '/update_emailpage', page: () => const UpdateEmail_Page()),
         GetPage(

@@ -8,7 +8,6 @@ import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-
 import '../../utills/globals.dart';
 
 class Chat_page extends StatefulWidget {
@@ -33,7 +32,8 @@ class _Chat_pageState extends State<Chat_page> {
     return Scaffold(
       resizeToAvoidBottomInset: false,
       appBar: AppBar(
-        title: const Text("Chat page"),
+        title:  Text("chat screen"),
+        centerTitle: true,
         actions: [
           IconButton(
             onPressed: () {},
@@ -56,20 +56,20 @@ class _Chat_pageState extends State<Chat_page> {
             fit: BoxFit.cover,
             image: (themeController.darkModeModel.isdark)
                 ? const AssetImage(
-                    "assets/background/black_bg.jpg",
+                    "assets/background/dark.jpg",
                   )
                 : const AssetImage(
-                    "assets/background/white_bg.png",
+                    "assets/background/light.jpg",
                   ),
           ),
         ),
         child: Padding(
-          padding: const EdgeInsets.all(16),
+          padding: const EdgeInsets.all(12),
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
+            // mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Expanded(
-                flex: 14,
+                flex: 6,
                 child: StreamBuilder(
                     stream: allMessages,
                     builder: (context, snapshot) {
@@ -116,31 +116,33 @@ class _Chat_pageState extends State<Chat_page> {
                                                 : CrossAxisAlignment.start,
                                             children: [
                                               Center(
-                                                  child: Text(allDocs[i]
-                                                      .data()['timestamp']
-                                                      .toDate()
-                                                      .toString()
-                                                      .split(" ")[0])),
+                                                child: (allDocs[i].data()[
+                                                            'timestamp'] ==
+                                                        null)
+                                                    ? const Text("")
+                                                    : Text(allDocs[i]
+                                                        .data()['timestamp']
+                                                        .toDate()
+                                                        .toString()
+                                                        .split(" ")[0]),
+                                              ),
                                               Chip(
                                                 label: Text(
                                                   "${allDocs[i].data()['msg']}",
-                                                  style:
-                                                      GoogleFonts.aBeeZee(),
+                                                  style: GoogleFonts.aBeeZee(),
                                                 ),
-                                                backgroundColor:
-                                                    (allDocs[i].data()[
-                                                                'sentBy'] ==
-                                                            FirebaseAuthHelper
-                                                                .firebaseAuth
-                                                                .currentUser
-                                                                ?.uid)
-                                                        ? Colors.blueAccent
-                                                        : Colors.transparent,
+                                                backgroundColor: (allDocs[i]
+                                                            .data()['sentBy'] ==
+                                                        FirebaseAuthHelper
+                                                            .firebaseAuth
+                                                            .currentUser
+                                                            ?.uid)
+                                                    ? Colors.purple
+                                                    : Colors.transparent,
                                                 elevation: 0,
                                                 autofocus: false,
                                               ),
-                                              (allDocs[i].data()[
-                                                          'timestamp'] ==
+                                              (allDocs[i].data()['timestamp'] ==
                                                       null)
                                                   ? const Text("")
                                                   : Text(
@@ -156,7 +158,7 @@ class _Chat_pageState extends State<Chat_page> {
                                                       ?.uid)
                                               ? const Icon(
                                                   Icons.done_all_rounded,
-                                                  color: Colors.blue,
+                                                  color: Colors.purpleAccent,
                                                 )
                                               : IconButton(
                                                   onPressed: () {},
@@ -177,26 +179,35 @@ class _Chat_pageState extends State<Chat_page> {
                     }),
               ),
               Expanded(
-                flex: 2,
+                flex: 1,
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
-                  child: TextFormField(
-                    controller: sendmessageController,
-                    decoration: InputDecoration(
-                      hintText: "write message here..",
-                      suffixIcon: IconButton(
-                        onPressed: () async {
-                          FireBaseFireStoreHelper.fireBaseFireStoreHelper
-                              .sendChatMessage(
-                                  uid1: args[0],
-                                  uid2: args[1],
-                                  msg: sendmessageController.text);
-                          sendmessageController.clear();
-                        },
-                        icon: const Icon(Icons.send),
+                  child: Row(
+                    children: [
+                      Expanded(
+                        child: TextField(
+                          controller: sendmessageController,
+                          decoration: InputDecoration(
+                            prefixIcon: Icon(Icons.emoji_emotions,size: 28,),
+                            hintText: "Message...",
+                            suffixIcon: IconButton(
+                              onPressed: () async {
+                                FireBaseFireStoreHelper.fireBaseFireStoreHelper
+                                    .sendChatMessage(
+                                        uid1: args[0],
+                                        uid2: args[1],
+                                        msg: sendmessageController.text);
+                                sendmessageController.clear();
+                              },
+                              icon: const Icon(Icons.send),
+                            ),
+                            border: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(20),
+                            ),
+                          ),
+                        ),
                       ),
-                      border: const OutlineInputBorder(),
-                    ),
+                    ],
                   ),
                 ),
               ),

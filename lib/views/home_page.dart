@@ -260,7 +260,7 @@ class _Home_pageState extends State<Home_page> {
                           // subtitle: Text("Uid: ${documents[i]['uid']}"),
                           trailing: IconButton(
                             onPressed: () {},
-                            icon: const Icon(Icons.navigate_next),
+                            icon: const Icon(Icons.delete),
                           ),
                           // trailing: IconButton(
                           //   onPressed: () async {

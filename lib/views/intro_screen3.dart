@@ -27,11 +27,11 @@ class _Intro_screen3State extends State<Intro_screen3> {
                 width: 300,
                 decoration: const BoxDecoration(
                   image: DecorationImage(
-                    image: AssetImage("assets/gif/inbox.gif"),
+                    image: AssetImage("assets/gif/i3-removebg-preview.png"),
                   ),
                 ),
               ),
-              const Text("Everything you Can Do in the App",
+              const Text("you find the chitty",
                   style: TextStyle(
                       fontSize: 25,
                       fontWeight: FontWeight.bold,
@@ -42,7 +42,7 @@ class _Intro_screen3State extends State<Intro_screen3> {
                 height: 10,
               ),
               const Text(
-                "You can share chat with your match.",
+                "You are also chat with your chity, it's means your daily chatting person.",
                 style: TextStyle(
                   fontWeight: FontWeight.w500,
                   color: Colors.grey,
