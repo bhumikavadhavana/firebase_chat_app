@@ -18,11 +18,11 @@ Project Technologies:
 - Flutter framework with MVC and Provider/GetX architecture
 
 <img src = "![Screenshot_2023-09-18-21-18-07-43_b783bf344239542886fee7b48fa4b892](https://github.com/bhumikavadhavana/firebase_chat_app/assets/131368253/1daaba0c-a591-4d14-8c9f-03edecd3dffe)
-"width="350px">
+"width="250px">
 <img src = "![Screenshot_2023-09-18-21-18-17-58_8c918bf06c4e14a3c6d2957a72894835](https://github.com/bhumikavadhavana/firebase_chat_app/assets/131368253/5d962767-6b3b-4529-8c27-506dd6f4f552)
-"width="350px">
+"width="250px">
 <img src = "![Screenshot_2023-09-18-21-18-20-72_8c918bf06c4e14a3c6d2957a72894835](https://github.com/bhumikavadhavana/firebase_chat_app/assets/131368253/8454d6a2-144e-47e1-b248-ea5e7a1de8be)
-"width="350px">
+"width="250px">
 
 <img src = "![Screenshot_2023-09-18-21-18-26-97_8c918bf06c4e14a3c6d2957a72894835](https://github.com/bhumikavadhavana/firebase_chat_app/assets/131368253/17a7c894-6569-4ae5-bea1-a6cc268fb2ee)
 "width="350px">
